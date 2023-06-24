@@ -10,7 +10,14 @@ import { BaseService } from 'src/app/services/base.service';
 export class ArukComponent {
   @Input() aktualisKategoria:any;
   aruk:any;
-
+  suly:any=[];
+  pushSuly()
+  {
+    for (let i = 0.1; i <= 3; i=i+0.1) {
+      this.suly.push(Math.round(i*10)/10)
+      
+    }
+  }
   ngOnChanges(changes:SimpleChanges){
     let change = changes['aktualisKategoria']
     if (change && change.currentValue!=change.previousValue)
@@ -29,6 +36,15 @@ export class ArukComponent {
   }
 
   constructor(private base:BaseService){
-   
+    this.pushSuly();
+  }
+
+  addTetel(aru:any,mennyiseg:any){
+    if (mennyiseg>0)
+      {
+        const tetel = {aru:aru, mennyiseg:mennyiseg}
+        this.base.addTetel(tetel);
+        // console.log(tetel)
+      }
   }
 }

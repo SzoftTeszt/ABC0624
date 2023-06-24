@@ -1,0 +1,6 @@
+#arulista{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 80vh; 
+    margin-bottom: 200px;
+}

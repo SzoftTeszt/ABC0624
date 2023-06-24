@@ -1,1 +1,30 @@
-<p>kosar works!</p>
+<!-- <div *ngFor="let tetel of tetelek">
+    {{tetel|json}}
+</div> -->
+
+<div class="card">
+       <div class="card-body">
+      <h2 class="card-title">Kosár</h2>
+      <div class="card-text">
+        <p class="display-3 text-primary">{{osszesen()}} Ft</p>
+      </div>
+      <a href="#" class="btn btn-primary">Bevásárlás elküldése</a>
+    </div>
+  </div>
+<div id="arulista" class="card mb-5 pb-5">
+       <div class="card-body  ">
+      <!-- <h2 class="card-title">Kosár</h2> -->
+      <div *ngFor="let tetel of tetelek" class="row position-relative">
+        <button (click)="deleteTetel(tetel)" type="button" class="position-absolute top-0 end-0 p-1 btn-close" aria-label="Close"></button>
+        <div class="col-6">
+            <img [src]="tetel.aru.kep" alt="Aru" class="img-thumbnail">
+            
+        </div>
+        <div class="col-6">
+            <h5>{{tetel.aru.leiras}}</h5>
+            <p>{{ar(tetel.aru.ar,tetel.mennyiseg)}} Ft</p>
+        </div>
+      </div>
+      <!-- <a href="#" class="btn btn-primary">Bevásárlás elküldése</a> -->
+    </div>
+  </div>
