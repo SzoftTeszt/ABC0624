@@ -1,0 +1,12 @@
+.container-fluid{
+    display: flex;
+}
+app-kategoriak{
+    flex-basis: 20%;
+}
+app-aruk{
+    flex-basis: 60%;
+}
+app-kosar{
+    flex-basis: 20%;
+}

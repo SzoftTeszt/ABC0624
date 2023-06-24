@@ -1,0 +1,20 @@
+<!-- {{aktualisKategoria}}
+{{aruk|json}} -->
+<div class="row">
+    <div *ngFor="let aru of aruk"  class="col-4">
+        
+            <div  class="card h-100">
+              <img [src]="aru.kep" class="card-img-top" alt="etel">
+              <div class="card-body">
+                <h5 class="card-title">{{aru.leiras}}</h5>
+                <p class="card-text">
+                    {{aru.ar}} Ft/{{aru.mennyiseg}}
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>          
+          
+    </div>
+</div>

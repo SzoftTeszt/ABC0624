@@ -1,0 +1,4 @@
+<ul class="list-group">
+    <li *ngFor="let kategoria of kategoriak;let elem; index as i" (click)="click(i, elem)"  [ngClass]="{'active':isActive(i)}" class="list-group-item">{{kategoria}}</li>
+
+  </ul>
